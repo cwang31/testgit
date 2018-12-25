@@ -1,0 +1,6 @@
+bar=barplot(a[,2],args.name,horiz=T,main="施引图分布")
+b<-read.table(header=T,file="C:/Users/Administrator/Desktop/quote.csv",sep=",")
+ggplot(b, aes(x=reorder(期刊,引用数), y=引用数,fill=分区))+geom_bar(stat = "identity")+theme(axis.text.x =element_blank(),legend.position = c(0.7,0.2))+scale_fill_brewer(palette = "Accent")+geom_text(aes(label=引用数),hjust=-0.3,color="blue")+coord_flip()
+
+
+barplot(math,names.arg=names)
